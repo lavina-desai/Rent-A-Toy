@@ -1,24 +1,36 @@
 <div layout-fill layout="column" layout-align="center none">
   <div layout="row" layout-align="center none">
+
       <mat-toolbar color="primary" class="mat-toolbar-signin">
         <span class="title-center">Login</span>
     </mat-toolbar>
-   <mat-card fxLayout="column" fxLayoutAlign="center center">   
+
+   <mat-card fxLayout="column" fxLayoutAlign="center center">
+
       <mat-card-content>
+
       <form>
+
         <table class="example-full-width" cellspacing="0">
               <tr>
                 <td>
+
           <mat-form-field class="example-full-width" >
-              <input matInput placeholder="Enter Email" FormControlName="email" type="email" required>
+
+              <mat-icon class="signin-mat-icon">email</mat-icon> <input matInput placeholder="Enter Email" FormControlName="email" type="email" required>
               </mat-form-field>
+
             </td>
           </tr>
           <tr>
           <td>
+
               <mat-form-field class="example-full-width" >
-                  <input matInput placeholder="Enter password" FormControlName="password" type="password" required>
-                  </mat-form-field> </tr>
+
+                  <mat-icon class="signin-mat-icon">lock</mat-icon> <input matInput placeholder="Enter password" FormControlName="password" type="password" required>
+                  </mat-form-field>
+                
+                </tr>
                 </table> 
         </form>
 
@@ -26,6 +38,7 @@
       
         <mat-card-actions>
             <button mat-raised-button (click)="login()" color="primary">Login</button>
+
             <button mat-raised-button (click)="signup()" color="primary">SignUp</button>
           </mat-card-actions>
 
