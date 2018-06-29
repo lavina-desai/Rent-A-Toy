@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './../home/home.component';
 import { SigninComponent } from './../signin/signin.component';
 import { SignupComponent } from './../signup/signup.component';
+import { ForgetPasswordComponent } from './../forget-password/forget-password.component';
 
 const routes: Routes = [
     { pathMatch: 'full', path: 'signin',component: SigninComponent},
     { pathMatch: 'full', path: 'signup', component: SignupComponent},
     { pathMatch: 'full', path: 'home', component: HomeComponent},
+    { pathMatch: 'full', path: 'forgetpassword', component: ForgetPasswordComponent},
     { pathMatch: 'full', path: '', redirectTo: '/signin' }
  
 ]
