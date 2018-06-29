@@ -1,0 +1,22 @@
+mat-card
+{
+    box-align: center;
+width:30%;
+margin-left: auto;
+margin-right: auto;
+}
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-toolbar-signin{
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+margin-right: auto;
+}
+.title-center {
+    margin: 0 auto;
+  }

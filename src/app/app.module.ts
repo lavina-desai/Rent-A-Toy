@@ -3,15 +3,32 @@ import { NgModule } from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { SigninComponent } from './signin/signin.component';
+import {MatButtonModule, MatCardModule,MatInputModule} from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+     MatCardModule,
+     MatInputModule,
+     MatProgressSpinnerModule,
+     MatToolbarModule
   ],
+  exports:[ MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule],
   providers: [],
   bootstrap: [AppComponent]
 })
