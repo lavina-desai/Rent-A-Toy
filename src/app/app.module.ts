@@ -7,6 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 
 import { SharedMaterialModule } from './shared-material/shared-material.module';
+import { AppRouterModule } from './app-router/app-router.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SharedMaterialModule } from './shared-material/shared-material.module';
   ],
   imports: [
     BrowserModule,
-    SharedMaterialModule
+    SharedMaterialModule,
+    AppRouterModule
   ],
   
   providers: [],
