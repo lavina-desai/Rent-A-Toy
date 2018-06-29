@@ -4,13 +4,21 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
+import {MatSidenavModule,MatListModule,MatIconModule} from '@angular/material';
+import { HomeComponent } from './home/home.component';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
