@@ -9,12 +9,16 @@ import { HomeComponent } from './home/home.component';
 import { SharedMaterialModule } from './shared-material/shared-material.module';
 import { AppRouterModule } from './app-router/app-router.module';
 
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
