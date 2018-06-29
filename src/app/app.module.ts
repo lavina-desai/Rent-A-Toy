@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+
 
 
 import {MatButtonModule, MatCardModule,MatInputModule} from '@angular/material';
@@ -19,7 +20,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   declarations: [
     AppComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatIconModule,
     MatSidenavModule,
     MatListModule
-
   ],
   
   providers: [],
