@@ -12,8 +12,16 @@
     height: 65%;
     display: flex;
     justify-content: center;
+    margin-left: auto;
+margin-right: auto;
 }
 
-.signup-tool-bar{
-    width: 53%;
+.mat-toolbar-signup{
+    text-align: center;
+    width: 38%;
+    margin-left: auto;
+margin-right: auto;
 }
+.title-center {
+    margin: 0 auto;
+  }
