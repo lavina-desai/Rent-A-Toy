@@ -10,6 +10,7 @@ import { SharedMaterialModule } from './shared-material/shared-material.module';
 import { AppRouterModule } from './app-router/app-router.module';
 
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     SigninComponent,
     SignupComponent,
     HomeComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
