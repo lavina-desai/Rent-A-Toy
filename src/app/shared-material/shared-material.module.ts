@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
+
 import {
   MatButtonModule, 
   MatCardModule,
@@ -10,7 +11,8 @@ import {
   MatIconModule,
   MatSidenavModule,
   MatListModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatMenuModule
   } from '@angular/material';
 
 @NgModule({
@@ -24,7 +26,8 @@ import {
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ],
   declarations: [],
   exports: [
@@ -35,7 +38,8 @@ import {
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ]
 })
 export class SharedMaterialModule { }

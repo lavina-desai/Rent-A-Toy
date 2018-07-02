@@ -1,27 +1,72 @@
+<mat-toolbar color="primary">
+    Rent A Toy</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav color="primary" mode="side" disableClose opened="true">
+        <mat-nav-list>
 
-<mat-toolbar color="primary">Rent A Toy</mat-toolbar>
-<mat-sidenav-container class="sidenav-container" >
-  <mat-sidenav color="primary" mode="side" disableClose opened="true" >
-    <mat-nav-list>
-       
-      <mat-list-item>
-          <mat-icon >add_shopping_cart</mat-icon> Popular Products
-      </mat-list-item>
+            <mat-list-item>
+                <mat-icon>add_shopping_cart</mat-icon> Popular Products
+            </mat-list-item>
 
-      <mat-list-item>
-          <mat-icon>search</mat-icon>Search By
-      </mat-list-item>
-      
-      <mat-list-item>
-          <mat-icon> shopping_cart</mat-icon> Cart
-      </mat-list-item>
-      
-      <mat-list-item>
-          <mat-icon>supervisor_account</mat-icon>About us
-      </mat-list-item>
-   
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content></mat-sidenav-content>
-  
+            <mat-list-item [matMenuTriggerFor]="search">
+                <mat-icon>search</mat-icon>Search By
+                <mat-menu #search="matMenu">
+                    <button mat-menu-item>Age Group</button>
+                    <button mat-menu-item>Price</button>
+                    <button mat-menu-item>Gender</button>
+                    <button mat-menu-item>Deposite</button>
+                </mat-menu>
+
+            </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon> shopping_cart</mat-icon> Cart
+            </mat-list-item>
+
+            <mat-list-item [matMenuTriggerFor]="product">
+                <mat-icon>details</mat-icon>Product details
+                <mat-menu #product="matMenu">
+                    <button mat-menu-item>Description of Product</button>
+                    <button mat-menu-item>Age Group</button>
+                    <button mat-menu-item>Price</button>
+                    <button mat-menu-item>Deposite</button>
+                </mat-menu>
+            </mat-list-item>
+
+            <mat-list-item [matMenuTriggerFor]="checkout">
+                <mat-icon>check_circle</mat-icon>Check-Out
+                <mat-menu #checkout="matMenu">
+                    <button mat-menu-item>Ordered item</button>
+                    <button mat-menu-item>Address</button>
+                    <button mat-menu-item>Product details</button>
+                </mat-menu>
+            </mat-list-item>
+
+            <mat-list-item [matMenuTriggerFor]="users">
+                <mat-icon>person</mat-icon>User
+                <mat-menu #users="matMenu">
+                    <button mat-menu-item [matMenuTriggerFor]="orderhistory">Order History</button>
+                    <button mat-menu-item [matMenuTriggerFor]="walletamount">Wallet Amount</button>
+                </mat-menu>
+                <mat-menu #orderhistory="matMenu">
+                    <button mat-menu-item>Reset</button>
+                    <button mat-menu-item>Historical</button>
+                </mat-menu>
+                <mat-menu #walletamount="matMenu">
+                    <button mat-menu-item>Reset</button>
+                    <button mat-menu-item>Transfer</button>
+                    <button mat-menu-item>Deposite</button>
+                </mat-menu>
+            </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon>functions</mat-icon>How it Works
+            </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon>supervisor_account</mat-icon>About us
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content></mat-sidenav-content>
 </mat-sidenav-container>
