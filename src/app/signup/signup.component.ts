@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output  } from '@angular/core';
+import { FormGroup, FormControl,FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -7,7 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
+  public errorMsg = '';
+  @Output() onSubmit = new EventEmitter()
+
+  name: string;
+  email:string;
+  pass:string;
+  
+  registerForm = new FormGroup({
+   username:new FormControl('',Validators.required),
+   email:new FormControl('', [Validators.required,Validators.email]),
+   pass:new FormControl('',Validators.required)
+   
+  });
+
   constructor() { }
+ register(){
+       if (!this._validateForm()) return
+  
+      this.onSubmit.emit(this.registerForm.value)
+   }
+  
+    
+  
+   private _validateForm() {
+       return this.registerForm.valid
+     }
 
   ngOnInit() {
   }
