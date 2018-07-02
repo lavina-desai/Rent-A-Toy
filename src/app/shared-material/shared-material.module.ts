@@ -4,6 +4,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 //import { FormGroup, FormControl, Validators, FormBuilder }  from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 import {
   MatButtonModule, 
   MatCardModule,
@@ -12,7 +13,8 @@ import {
   MatIconModule,
   MatSidenavModule,
   MatListModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatMenuModule
   } from '@angular/material';
 
 @NgModule({
@@ -27,10 +29,8 @@ import {
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
-    FormsModule,
-    ReactiveFormsModule
+       MatMenuModule
 
-    
   ],
   declarations: [],
   exports: [
@@ -43,8 +43,9 @@ import {
     MatListModule,
     MatToolbarModule,
     FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    MatMenuModule
+
   ]
 })
 export class SharedMaterialModule { }
