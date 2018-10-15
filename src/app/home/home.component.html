@@ -1,33 +1,4 @@
 
-<!-- 
-<mat-toolbar color="primary">Rent A Toy</mat-toolbar>
-<mat-sidenav-container class="sidenav-container" >
-  <mat-sidenav color="primary" mode="side" disableClose opened="true" >
-    <mat-nav-list>
-       
-      <mat-list-item>
-          <mat-icon >add_shopping_cart</mat-icon> Popular Products
-      </mat-list-item>
-
-      <mat-list-item>
-          <mat-icon>search</mat-icon>Search By
-      </mat-list-item>
-      
-      <mat-list-item>
-          <mat-icon> shopping_cart</mat-icon> Cart
-      </mat-list-item>
-      
-      <mat-list-item>
-          <mat-icon>supervisor_account</mat-icon>About us
-      </mat-list-item>
-   
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content></mat-sidenav-content>
-  
-</mat-sidenav-container> -->
-
-<!-- <mat-toolbar color="primary">Rent A Toy</mat-toolbar>
 <mat-sidenav-container class="sidenav-container" >
   <mat-sidenav color="primary" mode="side" disableClose opened="true" >
       <mat-nav-list>
@@ -37,20 +8,19 @@
         </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content></mat-sidenav-content>
+    <mat-sidenav-content>
     
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
-  
-    
-  
-  </mat-sidenav-container> -->
+</mat-sidenav-content>
+   
+  </mat-sidenav-container>
 
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary">
     Rent A Toy</mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav color="primary" mode="side" disableClose opened="true">
+    <mat-sidenav color="primary" mode="side" disableClose opened="true" #sidenav class="mat-elevation-z4">
         <mat-nav-list>
 
             <mat-list-item>
@@ -112,11 +82,15 @@
                 <mat-icon>functions</mat-icon>How it Works
             </mat-list-item>
 
-            <mat-list-item>
+            <mat-list-item routerLink="/about-us" routerLinkActive="active">
                 <mat-icon>supervisor_account</mat-icon>About us
             </mat-list-item>
         </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content></mat-sidenav-content>
-</mat-sidenav-container>
 
+<mat-sidenav-content>
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-content>
+</mat-sidenav-container> -->

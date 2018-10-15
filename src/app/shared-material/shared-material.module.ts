@@ -29,7 +29,7 @@ import {
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
-       MatMenuModule
+    MatMenuModule,
 
   ],
   declarations: [],

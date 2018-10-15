@@ -3,3 +3,9 @@
     padding-bottom: 30pc;
 
     }
+    mat-sidenav-container, .main-content {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    

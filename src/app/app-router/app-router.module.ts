@@ -8,13 +8,19 @@ import { ForgetPasswordComponent } from './../forget-password/forget-password.co
 import { AboutUsComponent } from '../about-us/about-us.component';
 
 const routes: Routes = [
-    { pathMatch: 'full', path: 'signin',component: SigninComponent},
+{
+  path: 'home', component: HomeComponent,
+  children:[
+    { pathMatch: 'full', path: 'signin', component: SigninComponent},
     { pathMatch: 'full', path: 'signup', component: SignupComponent},
     { pathMatch: 'full', path: 'home', component: HomeComponent},
     { pathMatch: 'full', path: 'forgetpassword', component: ForgetPasswordComponent},
     { pathMatch: 'full', path: 'about-us', component: AboutUsComponent},
-    { pathMatch: 'full', path: '', redirectTo: '/signin' }
- 
+    { pathMatch: 'full', path: '**', redirectTo: '' }
+  ]
+},
+{ path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home' }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
